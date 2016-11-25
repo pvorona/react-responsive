@@ -4,7 +4,9 @@ const { node, func, string, oneOfType } = PropTypes
 export class Media extends Component {
   constructor (props) {
     super(props)
+
     this.update = this.update.bind(this)
+    this.state = { }
     this.mediaQueryList = matchMedia(this.props.query)
     this.mediaQueryList.addListener(this.update)
   }
